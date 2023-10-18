@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EKv-JC-0Hw">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My LocationVC-->
+        <scene sceneID="Ttz-du-3Od">
+            <objects>
+                <viewController id="PvB-29-qKw" customClass="MyLocationVC" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8dI-lI-LhW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pgg-ej-NLz"/>
+                        <color key="backgroundColor" red="0.50807762150000002" green="0.5482829213" blue="0.68203777070000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y25-Sa-WOt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJS-7S-kAO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930.53435114503816" y="1218.3098591549297"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ytw-eu-G3n">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="EKv-JC-0Hw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CYD-kH-6NT">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uIf-cW-idi" kind="relationship" relationship="viewControllers" id="chA-Cd-Kx7"/>
+                        <segue destination="94j-cw-SeC" kind="relationship" relationship="viewControllers" id="w3A-zh-XdS"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Giw-aX-72Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="414.50381679389312" y="-251.40845070422537"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="5DA-3y-VUH">
+            <objects>
+                <viewController id="94j-cw-SeC" customClass="SearchBarVC" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sec-sf-Wrp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CbO-jy-ln7"/>
+                        <color key="backgroundColor" red="0.50807762150000002" green="0.5482829213" blue="0.68203777070000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="img_search1" selectedImage="img_search1" id="xcW-NI-9Ck"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1h7-3v-ViA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-193.12977099236642" y="485.91549295774649"/>
+        </scene>
+        <!--My Location-->
+        <scene sceneID="rcy-DA-Eot">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uIf-cW-idi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Location" image="img_vector" selectedImage="img_vector" id="kIC-lj-uEE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="j37-hV-bx9">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PvB-29-qKw" kind="relationship" relationship="rootViewController" id="6ga-cv-BPH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xmp-NM-N1i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930.53435114503816" y="485.91549295774649"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_search1" width="20" height="20"/>
+        <image name="img_vector" width="11.666666984558105" height="16.666666030883789"/>
+    </resources>
+</document>
